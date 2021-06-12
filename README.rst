@@ -55,6 +55,9 @@
    git add HelloExam.java
    git commit
 
+   # отправляю изменения на GitHub
+   git push origin git-practice-2
+
    # переключаюсь на ветку main
    git checkout main
 
@@ -62,6 +65,9 @@
    # Обратите внимание на аргумент --ff, он указывает на то,
    # что необходимо выполнить слияние методом fast-forward
    git merge --ff git-practice-1
+
+   # отправляю изменения на GitHub
+   git push origin main
 
 Часть 2. Написание кода и тестов
 --------------------------------
