@@ -12,5 +12,27 @@ public class HeapsterWatchImplTest {
         assertThat(watch.display12h()).isEqualTo("12:00 AM");
     }
 
-    // TODO: write your own tests here
+    @Test
+    public void test_watch_display_12h_midnight() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(0, 0);
+        assertThat(watch.display12h()).isEqualTo("12:00 AM");
+    }
+
+    @Test
+    public void test_watch_display_12h_noon() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(12, 0);
+        assertThat(watch.display12h()).isEqualTo("12:00 PM");
+    }
+
+    @Test
+    public void test_watch_display_12h_before_noon() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(11, 21);
+        assertThat(watch.display12h()).isEqualTo("11:21 AM");
+    }
+
+    @Test
+    public void test_watch_display_12h_after_noon() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(23, 21);
+        assertThat(watch.display12h()).isEqualTo("11:21 PM");
+    }
 }

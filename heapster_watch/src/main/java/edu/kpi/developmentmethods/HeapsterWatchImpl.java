@@ -29,8 +29,22 @@ public class HeapsterWatchImpl implements HeapsterWatch{
 
     @Override
     public String display12h() {
-        // TODO: write your code here
-        return null;
+        int hours = this.hours;
+        String am_pm = "AM";
+
+        hours = hours - 12;
+        if (hours < 0) {
+            hours += 12;
+        } else {
+            am_pm = "PM";
+        }
+
+        if (hours == 0) {
+            hours = 12;
+        }
+
+
+        return String.format("%02d:%02d %s", hours, this.minutes, am_pm);
     }
 
     @Override
