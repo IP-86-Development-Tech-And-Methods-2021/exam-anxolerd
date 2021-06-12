@@ -68,7 +68,7 @@
 
 Все изменения, связанные с выполнением второй части задания доступны по ссылке:
 `Часть 2. Пример выполнения задания
-<https://github.com/IP-86-Development-Tech-And-Methods-2021/exam-anxolerd/compare/5ff6ad6a25ddb4266060f32b9ecd3206150e6ba3...main>`_
+<https://github.com/IP-86-Development-Tech-And-Methods-2021/exam-anxolerd/compare/5ff6ad6a25ddb4266060f32b9ecd3206150e6ba3...83b4ae1>`_
 
 
 Часть 1. Работа с Git
