@@ -68,7 +68,11 @@ public class HeapsterWatchImpl implements HeapsterWatch{
 
     @Override
     public void increaseMinutes() {
-        // TODO: write your code here
+        this.minutes++;
+        if (this.minutes == 60) {
+            this.minutes = 0;
+            this.hours++;
+        }
     }
 
     @Override

@@ -83,4 +83,18 @@ public class HeapsterWatchImplTest {
         watch.decreaseHours();
         assertThat(watch.display24h()).isEqualTo("23:00");
     }
+
+    @Test
+    public void test_increase_minutes() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(12, 12);
+        watch.increaseMinutes();
+        assertThat(watch.display24h()).isEqualTo("12:13");
+    }
+
+    @Test
+    public void test_increase_minutes_wraps_hour() {
+        HeapsterWatchImpl watch = new HeapsterWatchImpl(12, 59);
+        watch.increaseMinutes();
+        assertThat(watch.display24h()).isEqualTo("13:00");
+    }
 }
