@@ -71,7 +71,7 @@ public class HeapsterWatchImpl implements HeapsterWatch{
         this.minutes++;
         if (this.minutes == 60) {
             this.minutes = 0;
-            this.hours++;
+            this.increaseHours();
         }
     }
 
