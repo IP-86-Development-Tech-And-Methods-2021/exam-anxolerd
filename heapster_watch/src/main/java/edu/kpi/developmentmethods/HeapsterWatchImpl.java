@@ -77,6 +77,10 @@ public class HeapsterWatchImpl implements HeapsterWatch{
 
     @Override
     public void decreaseMinutes() {
-        // TODO: write your code here
+        this.minutes--;
+        if (this.minutes == -1) {
+            this.minutes = 59;
+            this.decreaseHours();
+        }
     }
 }
