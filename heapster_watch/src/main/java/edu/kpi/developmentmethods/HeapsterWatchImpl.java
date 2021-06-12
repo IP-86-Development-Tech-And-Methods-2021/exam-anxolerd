@@ -2,11 +2,13 @@ package edu.kpi.developmentmethods;
 
 
 public class HeapsterWatchImpl implements HeapsterWatch{
+    private int hours;
+    private int minutes;
     /**
      * Creates a new HeapsterWatch instance at "00:00"
      */
     public HeapsterWatchImpl() {
-        // TODO: write your code here
+        this(0, 0);
     }
 
     /**
@@ -16,13 +18,13 @@ public class HeapsterWatchImpl implements HeapsterWatch{
      * @throws IllegalArgumentException if hours or minutes are out of allowed range
      */
     public HeapsterWatchImpl(int hours, int minutes) throws IllegalArgumentException{
-        // TODO: write your code here
+        this.hours = hours;
+        this.minutes = minutes;
     }
 
     @Override
     public String display24h() {
-        // TODO: write your code here
-        return null;
+        return String.format("%02d:%02d", this.hours, this.minutes);
     }
 
     @Override
