@@ -17,7 +17,10 @@ public class HeapsterWatchImpl implements HeapsterWatch{
      * @param minutes minutes. Should be an integer from range [0 .. 59]
      * @throws IllegalArgumentException if hours or minutes are out of allowed range
      */
-    public HeapsterWatchImpl(int hours, int minutes) throws IllegalArgumentException{
+    public HeapsterWatchImpl(int hours, int minutes) throws IllegalArgumentException {
+        if (hours < 0 || hours > 23 || minutes < 0 || minutes > 59) {
+            throw new IllegalArgumentException();
+        }
         this.hours = hours;
         this.minutes = minutes;
     }

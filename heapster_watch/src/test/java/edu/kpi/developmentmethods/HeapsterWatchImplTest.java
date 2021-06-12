@@ -35,4 +35,24 @@ public class HeapsterWatchImplTest {
         HeapsterWatchImpl watch = new HeapsterWatchImpl(23, 21);
         assertThat(watch.display12h()).isEqualTo("11:21 PM");
     }
+
+    @Test
+    public void test_exception_is_thrown_when_trying_to_create_watch_with_invalid_hours_value() {
+        assertThatIllegalArgumentException().isThrownBy(() -> {
+            new HeapsterWatchImpl(-1, 0);
+        });
+        assertThatIllegalArgumentException().isThrownBy(() -> {
+            new HeapsterWatchImpl(24, 0);
+        });
+    }
+
+    @Test
+    public void test_exception_is_thrown_when_trying_to_create_watch_with_invalid_minutes_value() {
+        assertThatIllegalArgumentException().isThrownBy(() -> {
+            new HeapsterWatchImpl(13, -1);
+        });
+        assertThatIllegalArgumentException().isThrownBy(() -> {
+            new HeapsterWatchImpl(13, 60);
+        });
+    }
 }
